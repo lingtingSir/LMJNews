@@ -1,24 +1,22 @@
 //
-//  LMJMainViewController.m
+//  LMJWeatherDetailVC.m
 //  LMJNews
 //
-//  Created by lmj on 15/12/23.
+//  Created by lmj on 15/12/27.
 //  Copyright (c) 2015年 lmj. All rights reserved.
 //
 
-#import "LMJMainViewController.h"
-#import "LMJNewsTableViewController.h"
+#import "LMJWeatherDetailVC.h"
 
-
-@interface LMJMainViewController ()
+@interface LMJWeatherDetailVC ()
 
 @end
 
-@implementation LMJMainViewController
+@implementation LMJWeatherDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

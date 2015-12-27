@@ -15,7 +15,7 @@
 
 + (BOOL)isShouldDisplayAdd
 {
-   
+//    NSLog(@"NSSearchPathForDirectoriesInDomains----%@",NSHomeDirectory());
     return ([[NSFileManager defaultManager] fileExistsAtPath:kCachedCurrentImage isDirectory:NO] || [[NSFileManager defaultManager] fileExistsAtPath:kCachedNewImage isDirectory:NO]);
 }
 
@@ -43,10 +43,12 @@
 + (void)loadLatestAddImage
 {
     NSInteger now = [[[NSDate alloc] init] timeIntervalSince1970];
+    NSLog(@"now---%ld",(long)now);
     NSString *path = [NSString stringWithFormat:@"http://g1.163.com/madr?app=7A16FBB6&platform=ios&category=startup&location=1&timestamp=%ld",(long)now];
     [[[LMJNetworkTools sharedNetworkToolsWithoutBaseUrl] GET:path parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSArray *addArray = [responseObject valueForKey:@"ads"];
         NSString *imgUrl = addArray[0][@"res_url"][0];
+        NSLog(@"imgUrl--%@",imgUrl);
         NSString *imgUrl2 = nil;
         if (addArray.count > 1) {
             imgUrl2 = addArray[1][@"res_url"][0];
@@ -56,6 +58,7 @@
         if (imgUrl2.length > 0) {
             if (one) {
                 [self downloadImage:imgUrl];
+              
                 [[NSUserDefaults standardUserDefaults] setBool:!one forKey:@"one"];
             } else {
                 [self downloadImage:imgUrl2];

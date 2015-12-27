@@ -29,6 +29,20 @@
 		AE621C791C2D51160006D4F5 /* LMJNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE621C781C2D51160006D4F5 /* LMJNaviController.m */; };
 		AE621C7D1C2D916B0006D4F5 /* LMJAddManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE621C7C1C2D916B0006D4F5 /* LMJAddManager.m */; };
 		AE621C801C2D91E50006D4F5 /* LMJNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AE621C7F1C2D91E50006D4F5 /* LMJNetworkTools.m */; };
+		AE9872731C2F927C00B774D2 /* LMJWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9872721C2F927C00B774D2 /* LMJWeatherView.m */; };
+		AE9872751C2F92B700B774D2 /* LMJWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9872741C2F92B700B774D2 /* LMJWeatherView.xib */; };
+		AE98727B1C2F976600B774D2 /* NewsUrls.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE98727A1C2F976600B774D2 /* NewsUrls.plist */; };
+		AE9872801C2FDE3900B774D2 /* LMJWeatherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE98727E1C2FDE3900B774D2 /* LMJWeatherDetailVC.m */; };
+		AE9872811C2FDE3900B774D2 /* LMJWeatherDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE98727F1C2FDE3900B774D2 /* LMJWeatherDetailVC.xib */; };
+		AE9872841C2FDE5500B774D2 /* LMJWeatherItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9872831C2FDE5500B774D2 /* LMJWeatherItemView.m */; };
+		AE9872861C2FDE6300B774D2 /* LMJWeatherItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9872851C2FDE6300B774D2 /* LMJWeatherItemView.xib */; };
+		AE9872891C2FDE9900B774D2 /* LMJWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9872881C2FDE9900B774D2 /* LMJWeatherModel.m */; };
+		AE98728C1C2FDED600B774D2 /* LMJWeatherDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE98728B1C2FDED600B774D2 /* LMJWeatherDetailModel.m */; };
+		AE98728F1C2FDEE600B774D2 /* LMJWeatherBgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE98728E1C2FDEE600B774D2 /* LMJWeatherBgModel.m */; };
+		AE98729B1C2FF68100B774D2 /* LMJNewsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE98729A1C2FF68100B774D2 /* LMJNewsCellTableViewCell.m */; };
+		AE98729E1C2FF6D500B774D2 /* LMJNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE98729D1C2FF6D500B774D2 /* LMJNewsTableViewController.m */; };
+		AE9872A11C2FF6EC00B774D2 /* LMJNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9872A01C2FF6EC00B774D2 /* LMJNewsModel.m */; };
+		AE9872A41C2FF71900B774D2 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9872A31C2FF71900B774D2 /* News.storyboard */; };
 		AEA4958B1C2BC114006EB5EE /* LMJBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA4958A1C2BC114006EB5EE /* LMJBarButton.m */; };
 		AEA495911C2BC18F006EB5EE /* LMJNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA495901C2BC18F006EB5EE /* LMJNewsTableViewController.m */; };
 		AEA495941C2BC1B6006EB5EE /* LMJTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA495931C2BC1B6006EB5EE /* LMJTitleLabel.m */; };
@@ -87,6 +101,31 @@
 		AE621C7C1C2D916B0006D4F5 /* LMJAddManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJAddManager.m; sourceTree = "<group>"; };
 		AE621C7E1C2D91E50006D4F5 /* LMJNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJNetworkTools.h; sourceTree = "<group>"; };
 		AE621C7F1C2D91E50006D4F5 /* LMJNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJNetworkTools.m; sourceTree = "<group>"; };
+		AE9872711C2F927C00B774D2 /* LMJWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherView.h; sourceTree = "<group>"; };
+		AE9872721C2F927C00B774D2 /* LMJWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherView.m; sourceTree = "<group>"; };
+		AE9872741C2F92B700B774D2 /* LMJWeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMJWeatherView.xib; sourceTree = "<group>"; };
+		AE9872791C2F94B100B774D2 /* LMJNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMJNews-Prefix.pch"; sourceTree = "<group>"; };
+		AE98727A1C2F976600B774D2 /* NewsUrls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsUrls.plist; sourceTree = "<group>"; };
+		AE98727C1C2F9DC700B774D2 /* HYQiHei-50J.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHei-50J.ttf"; sourceTree = "<group>"; };
+		AE98727D1C2FDE3900B774D2 /* LMJWeatherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherDetailVC.h; sourceTree = "<group>"; };
+		AE98727E1C2FDE3900B774D2 /* LMJWeatherDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherDetailVC.m; sourceTree = "<group>"; };
+		AE98727F1C2FDE3900B774D2 /* LMJWeatherDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMJWeatherDetailVC.xib; sourceTree = "<group>"; };
+		AE9872821C2FDE5500B774D2 /* LMJWeatherItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherItemView.h; sourceTree = "<group>"; };
+		AE9872831C2FDE5500B774D2 /* LMJWeatherItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherItemView.m; sourceTree = "<group>"; };
+		AE9872851C2FDE6300B774D2 /* LMJWeatherItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMJWeatherItemView.xib; sourceTree = "<group>"; };
+		AE9872871C2FDE9900B774D2 /* LMJWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherModel.h; sourceTree = "<group>"; };
+		AE9872881C2FDE9900B774D2 /* LMJWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherModel.m; sourceTree = "<group>"; };
+		AE98728A1C2FDED600B774D2 /* LMJWeatherDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherDetailModel.h; sourceTree = "<group>"; };
+		AE98728B1C2FDED600B774D2 /* LMJWeatherDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherDetailModel.m; sourceTree = "<group>"; };
+		AE98728D1C2FDEE600B774D2 /* LMJWeatherBgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJWeatherBgModel.h; sourceTree = "<group>"; };
+		AE98728E1C2FDEE600B774D2 /* LMJWeatherBgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJWeatherBgModel.m; sourceTree = "<group>"; };
+		AE9872991C2FF68100B774D2 /* LMJNewsCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJNewsCellTableViewCell.h; sourceTree = "<group>"; };
+		AE98729A1C2FF68100B774D2 /* LMJNewsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJNewsCellTableViewCell.m; sourceTree = "<group>"; };
+		AE98729C1C2FF6D500B774D2 /* LMJNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJNewsTableViewController.h; sourceTree = "<group>"; };
+		AE98729D1C2FF6D500B774D2 /* LMJNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJNewsTableViewController.m; sourceTree = "<group>"; };
+		AE98729F1C2FF6EC00B774D2 /* LMJNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJNewsModel.h; sourceTree = "<group>"; };
+		AE9872A01C2FF6EC00B774D2 /* LMJNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJNewsModel.m; sourceTree = "<group>"; };
+		AE9872A31C2FF71900B774D2 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		AEA495891C2BC114006EB5EE /* LMJBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJBarButton.h; sourceTree = "<group>"; };
 		AEA4958A1C2BC114006EB5EE /* LMJBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJBarButton.m; sourceTree = "<group>"; };
 		AEA4958F1C2BC18F006EB5EE /* LMJNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJNewsTableViewController.h; sourceTree = "<group>"; };
@@ -213,8 +252,11 @@
 		AE6104BF1C2A45C300D4B78E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AE9872761C2F93FC00B774D2 /* PCH */,
+				AE9872771C2F93FC00B774D2 /* Res */,
 				AE621C7A1C2D90590006D4F5 /* Other */,
 				AE6104C41C2A45C300D4B78E /* AudioVisual */,
+				AE9872901C2FF64700B774D2 /* News */,
 				AE6104CC1C2A45C300D4B78E /* Discovery */,
 				AE6104D41C2A45C300D4B78E /* HttpRequest */,
 				AE6104D61C2A45C300D4B78E /* Main */,
@@ -657,6 +699,9 @@
 		AE6104F51C2A45C300D4B78E /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AE98727D1C2FDE3900B774D2 /* LMJWeatherDetailVC.h */,
+				AE98727E1C2FDE3900B774D2 /* LMJWeatherDetailVC.m */,
+				AE98727F1C2FDE3900B774D2 /* LMJWeatherDetailVC.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -664,6 +709,12 @@
 		AE6104F61C2A45C300D4B78E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE9872871C2FDE9900B774D2 /* LMJWeatherModel.h */,
+				AE9872881C2FDE9900B774D2 /* LMJWeatherModel.m */,
+				AE98728A1C2FDED600B774D2 /* LMJWeatherDetailModel.h */,
+				AE98728B1C2FDED600B774D2 /* LMJWeatherDetailModel.m */,
+				AE98728D1C2FDEE600B774D2 /* LMJWeatherBgModel.h */,
+				AE98728E1C2FDEE600B774D2 /* LMJWeatherBgModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -671,6 +722,7 @@
 		AE6104F71C2A45C300D4B78E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE9872701C2F924F00B774D2 /* MainView */,
 				AE6104F81C2A45C300D4B78E /* CollectionViewCell */,
 				AE6104F91C2A45C300D4B78E /* TableViewCell */,
 			);
@@ -698,6 +750,130 @@
 				AE621C7C1C2D916B0006D4F5 /* LMJAddManager.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		AE9872701C2F924F00B774D2 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872711C2F927C00B774D2 /* LMJWeatherView.h */,
+				AE9872721C2F927C00B774D2 /* LMJWeatherView.m */,
+				AE9872741C2F92B700B774D2 /* LMJWeatherView.xib */,
+				AE9872821C2FDE5500B774D2 /* LMJWeatherItemView.h */,
+				AE9872831C2FDE5500B774D2 /* LMJWeatherItemView.m */,
+				AE9872851C2FDE6300B774D2 /* LMJWeatherItemView.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		AE9872761C2F93FC00B774D2 /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872791C2F94B100B774D2 /* LMJNews-Prefix.pch */,
+			);
+			path = PCH;
+			sourceTree = "<group>";
+		};
+		AE9872771C2F93FC00B774D2 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				AE98727C1C2F9DC700B774D2 /* HYQiHei-50J.ttf */,
+				AE9872781C2F93FC00B774D2 /* plist */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		AE9872781C2F93FC00B774D2 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				AE98727A1C2F976600B774D2 /* NewsUrls.plist */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
+		AE9872901C2FF64700B774D2 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872911C2FF64700B774D2 /* Controller */,
+				AE9872941C2FF64700B774D2 /* Model */,
+				AE9872951C2FF64700B774D2 /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		AE9872911C2FF64700B774D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872921C2FF64700B774D2 /* CollertionViewController */,
+				AE9872931C2FF64700B774D2 /* MainViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE9872921C2FF64700B774D2 /* CollertionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollertionViewController;
+			sourceTree = "<group>";
+		};
+		AE9872931C2FF64700B774D2 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AE98729C1C2FF6D500B774D2 /* LMJNewsTableViewController.h */,
+				AE98729D1C2FF6D500B774D2 /* LMJNewsTableViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		AE9872941C2FF64700B774D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE98729F1C2FF6EC00B774D2 /* LMJNewsModel.h */,
+				AE9872A01C2FF6EC00B774D2 /* LMJNewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE9872951C2FF64700B774D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872A21C2FF70B00B774D2 /* StoryBoard */,
+				AE9872961C2FF64700B774D2 /* CollectionViewCell */,
+				AE9872971C2FF64700B774D2 /* MainView */,
+				AE9872981C2FF64700B774D2 /* TableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE9872961C2FF64700B774D2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AE9872971C2FF64700B774D2 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		AE9872981C2FF64700B774D2 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872991C2FF68100B774D2 /* LMJNewsCellTableViewCell.h */,
+				AE98729A1C2FF68100B774D2 /* LMJNewsCellTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		AE9872A21C2FF70B00B774D2 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				AE9872A31C2FF71900B774D2 /* News.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,7 +959,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE98727B1C2F976600B774D2 /* NewsUrls.plist in Resources */,
 				AE6104A51C2A3B9F00D4B78E /* Main.storyboard in Resources */,
+				AE9872811C2FDE3900B774D2 /* LMJWeatherDetailVC.xib in Resources */,
+				AE9872A41C2FF71900B774D2 /* News.storyboard in Resources */,
+				AE9872751C2F92B700B774D2 /* LMJWeatherView.xib in Resources */,
+				AE9872861C2FDE6300B774D2 /* LMJWeatherItemView.xib in Resources */,
 				AE6104AA1C2A3B9F00D4B78E /* LaunchScreen.xib in Resources */,
 				AE6104A71C2A3B9F00D4B78E /* Images.xcassets in Resources */,
 			);
@@ -851,25 +1032,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9872891C2FDE9900B774D2 /* LMJWeatherModel.m in Sources */,
 				AEA495941C2BC1B6006EB5EE /* LMJTitleLabel.m in Sources */,
 				AE26FDDD1C2AECE000DF4FEE /* LMJNavViewController.m in Sources */,
 				AE6104FB1C2A45C300D4B78E /* main.m in Sources */,
 				AE621C791C2D51160006D4F5 /* LMJNaviController.m in Sources */,
+				AE9872801C2FDE3900B774D2 /* LMJWeatherDetailVC.m in Sources */,
 				AE6104FA1C2A45C300D4B78E /* AppDelegate.m in Sources */,
 				AE621C6C1C2D36330006D4F5 /* NSData+Extension.m in Sources */,
 				AE621C731C2D36330006D4F5 /* UIView+Extension.m in Sources */,
 				AEA4958B1C2BC114006EB5EE /* LMJBarButton.m in Sources */,
+				AE98728C1C2FDED600B774D2 /* LMJWeatherDetailModel.m in Sources */,
 				AE26FDE11C2AED5000DF4FEE /* LMJTabBar.m in Sources */,
+				AE9872A11C2FF6EC00B774D2 /* LMJNewsModel.m in Sources */,
+				AE9872731C2F927C00B774D2 /* LMJWeatherView.m in Sources */,
 				AE621C721C2D36330006D4F5 /* UIImage+Extension.m in Sources */,
 				AE621C711C2D36330006D4F5 /* UIColor+Extension.m in Sources */,
 				AE621C6E1C2D36330006D4F5 /* NSString+Extension.m in Sources */,
+				AE9872841C2FDE5500B774D2 /* LMJWeatherItemView.m in Sources */,
 				AE621C7D1C2D916B0006D4F5 /* LMJAddManager.m in Sources */,
 				AE621C6D1C2D36330006D4F5 /* NSObject+Extension.m in Sources */,
+				AE98728F1C2FDEE600B774D2 /* LMJWeatherBgModel.m in Sources */,
 				AE621C801C2D91E50006D4F5 /* LMJNetworkTools.m in Sources */,
 				AE621C761C2D36A00006D4F5 /* LMJMainTabBarController.m in Sources */,
 				AE621C701C2D36330006D4F5 /* UIButton+Extension.m in Sources */,
+				AE98729B1C2FF68100B774D2 /* LMJNewsCellTableViewCell.m in Sources */,
 				AE26FDDA1C2AECC600DF4FEE /* LMJMainViewController.m in Sources */,
 				AE621C6F1C2D36330006D4F5 /* UIBarButtonItem+Extension.m in Sources */,
+				AE98729E1C2FF6D500B774D2 /* LMJNewsTableViewController.m in Sources */,
 				AEA495911C2BC18F006EB5EE /* LMJNewsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -996,6 +1186,7 @@
 			baseConfigurationReference = F603172E41F001F426F25CA6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/lmj/Desktop/开发/LMJNews/Classes/PCH/LMJNews-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1017,6 +1208,7 @@
 			baseConfigurationReference = 155F4D9116F3059315DD2C6A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/lmj/Desktop/开发/LMJNews/Classes/PCH/LMJNews-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
