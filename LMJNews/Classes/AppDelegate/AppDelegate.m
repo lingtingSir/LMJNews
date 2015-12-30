@@ -16,7 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"update"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"top20"];
+    UIApplication *app = [UIApplication sharedApplication];
+    app.statusBarStyle = UIStatusBarStyleLightContent;
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     return YES;
 }
 

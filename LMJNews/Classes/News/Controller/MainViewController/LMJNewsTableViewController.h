@@ -10,4 +10,7 @@
 
 @interface LMJNewsTableViewController : UITableViewController
 
+@property (nonatomic,copy) NSString *urlString;
+@property (nonatomic,assign) NSInteger index;
+
 @end

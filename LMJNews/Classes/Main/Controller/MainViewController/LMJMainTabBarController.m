@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     
     [LMJAddManager loadLatestAddImage];
     if ([LMJAddManager isShouldDisplayAdd]) {
         //
@@ -64,6 +65,20 @@
 //    [tabBar addImageView];
 //    self.selectedIndex = 0;
 }
+- (void)viewWillDisappear:(BOOL)animated
+{
+    
+    [[UIApplication sharedApplication]setStatusBarHidden:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    [super viewWillAppear:animated];
+    
+
+}
+
 
 #pragma mark - LMJTabBarDelegate 
 - (void)ChangeSelIndexFrom:(NSInteger)from to:(NSInteger)to

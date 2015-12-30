@@ -7,8 +7,17 @@
 //
 
 #import "LMJNewsTableViewController.h"
+#import "LMJNewsCell.h"
+#import "LMJNetworkTools.h"
+#import "LMJNewsModel.h"
+
+#import <MJRefresh.h>
+#import <MJExtension.h>
 
 @interface LMJNewsTableViewController ()
+
+@property (nonatomic,strong) NSMutableArray *arrayList;
+@property (nonatomic,assign) BOOL update;
 
 @end
 
@@ -16,18 +25,88 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __unsafe_unretained __typeof(self) weakSelf = self;
+    self.view.backgroundColor = [UIColor clearColor];
+    // 设置回调（一旦进入下拉刷新刷新状态就会调用这个refreshingBlock）
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 设置回调（一旦进入上拉刷新刷新状态就会调用这个refreshingBlock）
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf loadMoreData];
+    }];
+    self.update = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(welcome) name:@"LMJAdvertisementKey" object:nil];
+
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
+
+- (void)setUrlString:(NSString *)urlString
+{
+    _urlString = urlString;
+}
+
+- (void)welcome
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"update"];
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"update"]) {
+        return;
+    }
+    if (self.update == YES) {
+        [self.tableView.mj_header beginRefreshing];
+        self.update = NO;
+    }
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"contentStart" object:nil]];
+}
+
+#pragma mark -－ 刷新数据
+#pragma mark 下拉刷新
+- (void)loadData
+{
+    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/0-20.html",self.urlString];
+    [self loadDataForType:1 withURL:allUrlstring];
+
+}
+#pragma mark 上拉刷新
+- (void)loadMoreData
+{
+    NSString *allUrlstring = [NSString  stringWithFormat:@"/nc/article/%@/%ld-20.html",self.urlString,(self.arrayList.count - self.arrayList.count % 10)];
+    [self loadDataForType:2 withURL:allUrlstring];
+}
+
+// ------公共方法
+- (void)loadDataForType:(int)type withURL:(NSString *)allUrlstring
+{
+    [[LMJNetworkTools sharedNetworkTools] GET:allUrlstring parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        NSLog(@"LMJNewsTableViewController--!%@",allUrlstring);
+        NSString *key = [responseObject.keyEnumerator nextObject];
+        NSArray *tempArray = responseObject[key];
+        NSMutableArray *arrayM = [LMJNewsModel objectArrayWithKeyValuesArray:tempArray];
+        if (type == 1) {
+            self.arrayList = arrayM;
+            [self.tableView.mj_header endRefreshing];
+        } else if (type == 2) {
+            [self.arrayList addObjectsFromArray:arrayM];
+            [self.tableView.mj_footer endRefreshing];
+            [self.tableView reloadData];
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"LoadDataForType,error:%@",error);
+    }];
+}
+
 
 #pragma mark - Table view data source
 
@@ -39,19 +118,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.arrayList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    T1348647853363 *t1348647853363 = self.arrayList[indexPath.row];
     
+    NSString *ID = [LMJNewsCell idForRow:t1348647853363];
+    if ((indexPath.row % 20 == 0) && (indexPath.row != 0)) {
+        ID = @"NewsCell";
+    }
+    
+    LMJNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.t1348647853363 = t1348647853363;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

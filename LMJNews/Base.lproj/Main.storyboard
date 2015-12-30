@@ -30,7 +30,7 @@
         <!--Main View Controller-->
         <scene sceneID="kNG-ds-uXg">
             <objects>
-                <viewController id="ib8-tW-P9c" userLabel="Main View Controller" sceneMemberID="viewController">
+                <viewController id="ib8-tW-P9c" userLabel="Main View Controller" customClass="LMJMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6FT-cO-4Jw"/>
                         <viewControllerLayoutGuide type="bottom" id="rJ0-EG-K6l"/>
@@ -96,6 +96,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="TopToTop" destination="ZO1-sW-YPV" id="PwI-Ym-BFj"/>
+                        <outlet property="bigScollView" destination="cFc-F4-Kuo" id="PO3-sK-dtk"/>
+                        <outlet property="smallScollView" destination="6D4-Ne-dbx" id="u88-mS-iNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyJ-yY-IlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +124,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LMJ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcU-lb-2vq">
                                         <rect key="frame" x="164" y="319" width="48" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

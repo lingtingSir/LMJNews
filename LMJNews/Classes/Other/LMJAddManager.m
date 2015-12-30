@@ -15,7 +15,7 @@
 
 + (BOOL)isShouldDisplayAdd
 {
-//    NSLog(@"NSSearchPathForDirectoriesInDomains----%@",NSHomeDirectory());
+    NSLog(@"NSSearchPathForDirectoriesInDomains----%@",NSHomeDirectory());
     return ([[NSFileManager defaultManager] fileExistsAtPath:kCachedCurrentImage isDirectory:NO] || [[NSFileManager defaultManager] fileExistsAtPath:kCachedNewImage isDirectory:NO]);
 }
 

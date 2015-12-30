@@ -1,18 +1,18 @@
 //
-//  LMJNewsTableViewController.m
+//  LMJMainTableViewController.m
 //  LMJNews
 //
-//  Created by lmj on 15/12/24.
+//  Created by lmj on 15/12/29.
 //  Copyright (c) 2015年 lmj. All rights reserved.
 //
 
-#import "LMJNewsTableViewController.h"
+#import "LMJMainTableViewController.h"
 
-@interface LMJNewsTableViewController ()
+@interface LMJMainTableViewController ()
 
 @end
 
-@implementation LMJNewsTableViewController
+@implementation LMJMainTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
