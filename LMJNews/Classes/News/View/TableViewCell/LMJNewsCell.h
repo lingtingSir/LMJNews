@@ -19,6 +19,7 @@
 /**
  *  类方法返回行高
  */
-+ (CGFloat *)heightForRow:(T1348647853363 *)t1348647853363;
++ (CGFloat)heightForRow:(T1348647853363 *)t1348647853363;
+
 
 @end

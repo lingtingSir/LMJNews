@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LMJWeatherModel;
 @interface LMJWeatherView : UIView
+@property (nonatomic,strong) LMJWeatherModel *weatherModel;
+
+
++ (instancetype)view;
+- (void)addAnimate;
 
 @end

@@ -10,7 +10,7 @@
 #import "LMJNewsCell.h"
 #import "LMJNetworkTools.h"
 #import "LMJNewsModel.h"
-
+#import "LMJNewsCell2TableViewCell.h"
 #import <MJRefresh.h>
 #import <MJExtension.h>
 
@@ -60,7 +60,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+   
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"update"]) {
         return;
     }
@@ -93,10 +93,16 @@
         NSLog(@"LMJNewsTableViewController--!%@",allUrlstring);
         NSString *key = [responseObject.keyEnumerator nextObject];
         NSArray *tempArray = responseObject[key];
-        NSMutableArray *arrayM = [LMJNewsModel objectArrayWithKeyValuesArray:tempArray];
+//        NSLog(@"tempArray--%@",tempArray);
+        NSMutableArray *arrayM = [T1348647853363 objectArrayWithKeyValuesArray:tempArray];
+//        NSLog(@"arrayM--%@",arrayM[0][@"title"]);
+//        for (T1348647853363 *t1348647853363 in arrayM) {
+//            NSLog(@"T1348647853363---%@",t1348647853363.title);
+//        }
         if (type == 1) {
             self.arrayList = arrayM;
             [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
         } else if (type == 2) {
             [self.arrayList addObjectsFromArray:arrayM];
             [self.tableView.mj_footer endRefreshing];
@@ -105,80 +111,64 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"LoadDataForType,error:%@",error);
     }];
+    
 }
 
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+#pragma mark - /************************* tbv数据源方法 ***************************/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.arrayList.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     T1348647853363 *t1348647853363 = self.arrayList[indexPath.row];
     
     NSString *ID = [LMJNewsCell idForRow:t1348647853363];
-    if ((indexPath.row % 20 == 0) && (indexPath.row != 0)) {
+    
+    if ((indexPath.row%20 == 0)&&(indexPath.row != 0)) {
         ID = @"NewsCell";
     }
     
-    LMJNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    LMJNewsCell *cell =  [tableView  dequeueReusableCellWithIdentifier:ID];
+    
     cell.t1348647853363 = t1348647853363;
+//    [cell CellWithModel:newsModel];
+    
     return cell;
+    
+}
+#pragma mark - /************************* tbv代理方法 ***************************/
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    T1348647853363 *t1348647853363 = self.arrayList[indexPath.row];
+    
+    CGFloat rowHeight = [LMJNewsCell heightForRow:t1348647853363];
+    
+    if ((indexPath.row % 20 == 0)&&(indexPath.row != 0)) {
+        rowHeight = 80;
+    }
+    
+    return rowHeight;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 刚选中又马上取消选中，格子不变色
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = [UIColor yellowColor];
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

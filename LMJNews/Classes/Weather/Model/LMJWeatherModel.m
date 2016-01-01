@@ -10,4 +10,21 @@
 
 @implementation LMJWeatherModel
 
+
+
++ (NSDictionary *)objectClassInArray{
+    return @{@"北京|北京" : [LMJWeatherModel class]};
+}
 @end
+
+
+@implementation Pm2D5
+
+@end
+
+
+@implementation LMJWeatherDetailModel
+
+@end
+
+

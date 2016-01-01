@@ -20,37 +20,53 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgOther1;
 @property (weak, nonatomic) IBOutlet UIImageView *imgOther2;
 
+
+
 @end
 
 @implementation LMJNewsCell
+
 
 - (void)awakeFromNib {
     // Initialization code
 }
 
+
 - (void)setT1348647853363:(T1348647853363 *)t1348647853363
 {
     _t1348647853363 = t1348647853363;
-   
-    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:_t1348647853363.imgsrc]];
+    
+//    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.NewsModel.imgsrc]];
+//
+    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.t1348647853363.imgsrc] placeholderImage:[UIImage imageNamed:@"302"]];
+//    NSLog(@"self.t1348647853363.title--%@",self.t1348647853363.title);
     self.lblTitle.text = self.t1348647853363.title;
     self.lblSubtitle.text = self.t1348647853363.digest;
-    
-    // 如果回复太多酒改成几点几万
-    CGFloat count = self.t1348647853363.replyCount;
+    NSLog(@"");
+    // 如果回复太多就改成几点几万
+    CGFloat count =  self.t1348647853363.replyCount;
     NSString *displayCount;
     if (count > 10000) {
-        displayCount = [NSString stringWithFormat:@"%.1f万跟帖",count / 10000];
-    } else {
+        displayCount = [NSString stringWithFormat:@"%.1f万跟帖",count/10000];
+    }else{
         displayCount = [NSString stringWithFormat:@"%.0f跟帖",count];
     }
     self.lblReply.text = displayCount;
     
     // 多图cell
     if (self.t1348647853363.imgextra.count == 2) {
-        [self.imgOther1 sd_setImageWithURL:[NSURL URLWithString:self.t1348647853363.imgextra[0][@"imgsrc"]] placeholderImage:[UIImage imageNamed:@"302"]];
-        [self.imgOther2 sd_setImageWithURL:[NSURL URLWithString:self.t1348647853363.imgextra[1][@"imgsrc"]] placeholderImage:[UIImage imageNamed:@"302"]];
+        
+        //        [self.imgOther1 sd_setImageWithURL:[NSURL URLWithString:self.NewsModel.imgextra[0][@"imgsrc"]]];
+        //        [self.imgOther2 sd_setImageWithURL:[NSURL URLWithString:self.NewsModel.imgextra[1][@"imgsrc"]]];
+        Imgextra *imgxtra = self.t1348647853363.imgextra[0];
+        Imgextra *imgxtra2 = self.t1348647853363.imgextra[1];
+         [self.imgOther1 sd_setImageWithURL:[NSURL URLWithString:imgxtra.imgsrc] placeholderImage:[UIImage imageNamed:@"302"]];
+         [self.imgOther1 sd_setImageWithURL:[NSURL URLWithString:imgxtra2.imgsrc] placeholderImage:[UIImage imageNamed:@"302"]];
+ 
+        
+        
     }
+
 }
 
 #pragma mark - 类方法返回可重用的id

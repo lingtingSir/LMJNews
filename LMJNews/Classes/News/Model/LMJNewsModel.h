@@ -20,7 +20,7 @@
 
 @property (nonatomic, copy) NSString *ptime;
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, strong) NSArray *imgextra;
 

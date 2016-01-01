@@ -7,7 +7,9 @@
 //
 
 #import "LMJWeatherView.h"
-
+#import "LMJWeatherModel.h"
+#import "UIView+Extension.h"
+#import "lmjes"
 @implementation LMJWeatherView
 
 /*
